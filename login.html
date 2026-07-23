@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIAD - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .login-container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            padding: 20px;
+        }
+        .login-box {
+            background: rgba(0, 255, 65, 0.05);
+            border: 2px solid #00ff41;
+            border-radius: 20px;
+            padding: 50px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .login-box h2 {
+            color: #00ff41;
+            font-family: 'Orbitron', monospace;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            color: #888;
+            margin-bottom: 5px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0,0,0,0.5);
+            border: 1px solid rgba(0,255,65,0.2);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #00ff41;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background: #00ff41;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .login-btn:hover {
+            background: #00ff88;
+            box-shadow: 0 0 30px rgba(0,255,65,0.3);
+        }
+        .login-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-size: 0.8rem;
+        }
+        .login-footer a {
+            color: #00ff41;
+            text-decoration: none;
+        }
+        .badge {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            color: #444;
+            font-size: 0.7rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    <div class="scan-line"></div>
+    
+    <header>
+        <div class="logo-container">
+            <div class="radar"></div>
+            <h1>BIAD</h1>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html" class="active">Login</a>
+        </nav>
+    </header>
+
+    <div class="login-container">
+        <div class="login-box">
+            <h2>🔐 SECURE ACCESS</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" placeholder="Enter username" required>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="login-btn">ACCESS PLATFORM</button>
+            </form>
+            <div class="login-footer">
+                <p>Demo: <span style="color:#00ff41;">admin / admin123</span></p>
+            </div>
+            <div class="badge">
+                <span>🔒 256-bit</span>
+                <span>🛡️ Zero-trust</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = 'dashboard.html';
+        });
+    </script>
+</body>
+</html>
